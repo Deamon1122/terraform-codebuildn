@@ -10,14 +10,15 @@ terraform {
 # Providers
 provider "aws" {
   region  = "us-east-1"
-  profile = "default"
+  profile = "Ayaz"
 }
 
 terraform {
   backend "s3" {
     bucket = "codebuildpipes3"
-    key = "dev/terraform"
-    region = "us-east-1"    
+    key = "dev/terraform.state"
+    region = "us-east-1"
+    profile = "Ayaz"
   }
 }
 
